@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New York Times</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+       <img id="title" src ='./New York Times API-logo.png' />
+    </div>
+
+    <div id="maincontainer" class="container border shadow">  
+      
+
+        <div class="input-group mb-3 mt-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text text-light" >Search Term</span>
+            </div>
+            <input id="searchTerm" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3 mt-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text text-light "># of Results</span>
+            </div>
+            <input id="numResult" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3 mt-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text text-light ">Start Year </span>
+            </div>
+            <input id="startYear" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="optional">
+        </div>
+        <div class="input-group mb-3 mt-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text text-light" >End Year   </span>
+            </div>
+            <input id="endYear" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="optional">
+        </div>
+        <div class ="row text-center"> 
+            <div class="col-4"> 
+
+            </div>
+            <div class="col-2 mb-2"> 
+                <button id="searchButton" type="button" class="btn btn-primary">Search</button>
+            </div>
+            <div class="col-1 mb-2">
+            <button id="clearButton" type="button" class="btn btn-danger">Clear</button>
+            </div>
+            <div class="col-4">
+            
+            </div>
+            
+        </div>
+
+        
+    </div> 
+    <div class="container mt-4 mb-3 "> 
+        <div class="card shadow">
+            <div class="card-header text-light">
+                Search Results
+            </div>
+            <div class="card-body text-center">
+                    <h3> No Results Yet! </h3>
+                <a href="https://www.nytimes.com/" class="btn btn-success text-light">Go to New York Times</a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+        <script src="./main.js"></script>
+    </body>
+</html>

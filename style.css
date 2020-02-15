@@ -1,0 +1,38 @@
+.card-header{ 
+    background-color: #007bff;
+;
+}
+.input-group-text {
+        background-color: #007bff;
+
+}
+
+.shadow {
+-webkit-box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.31);
+-moz-box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.31);
+box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.31);
+}
+
+#title{
+
+    height: 30vh;
+    width: auto;
+
+    margin-top: -5%;
+
+        
+
+        
+
+}
+
+body {
+    background-color: #e9ecef;
+    ;
+}
+#maincontainer{
+        margin-top: -8%;
+
+    background-color:white;
+}
+
