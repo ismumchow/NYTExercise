@@ -13,9 +13,6 @@ $(document).ready(function () {
     
         startYear = $('#startYear').val().trim();
 
-        console.log(searchVal);
-        console.log(numOfResults);
-        console.log(startYear);
 
         if(searchVal === ''|| numOfResults == '') { 
             alert('must complete the necessary inputs');
@@ -39,14 +36,13 @@ $(document).ready(function () {
 
             for (var i = 0; i < numOfResults; i++) {
               var articleTitle = response.response.docs[i].abstract;
-
-             var articleLink = response.response.docs[i].web_url;
+              var publishYear = response.response.docs[i].pub_date;
+              var articleLink = response.response.docs[i].web_url;
               var author = response.response.docs[i].byline.original; 
 
-              console.log(articleTitle); 
-              console.log(articleLink); 
-              console.log(author);
-
+              publishYear = publishYear.substring(0,4);
+              
+              
               var cardDiv = $("<div>");
               cardDiv.addClass("card");
               var cardHeader = $("<div>"); 
@@ -61,11 +57,10 @@ $(document).ready(function () {
 
               cardDiv.append(cardHeader); 
               $('#searchContainer').append(cardDiv)
+              } 
+             
               
-
-              console.log(i);
-              
-            }
+            });
             //   var youtubeDiv = $("<div>");
             //   var newVid = $("<iframe>");
             //   newVid.attr({
@@ -78,17 +73,17 @@ $(document).ready(function () {
             //   youtubeDiv.append(newVid);
 
             //   $("#youtubeContainer").append(youtubeDiv);
-            });
-          };
-         });
-    
-
-    $('#clearButton').on('click', function () {
+            }
+        });
+         $('#clearButton').on('click', function () {
          $('#searchTerm').val('');
          $('#numResult').val('');
         $('#startYear').val('');
     });
 
+          
+ });
+    
 
 
 
@@ -98,7 +93,3 @@ $(document).ready(function () {
 
 
 
-
-
-
-});
